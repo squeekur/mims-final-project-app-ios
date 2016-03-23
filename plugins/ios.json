@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "de.appplant.cordova.common.registerusernotificationsettings": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "de.appplant.cordova.plugin.background-mode": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        },
+        "de.appplant.cordova.plugin.local-notification-ios9-fix": {
+            "PACKAGE_NAME": "edu.berkeley.mimsFinalProjectiOS"
+        }
+    },
+    "dependent_plugins": {}
+}

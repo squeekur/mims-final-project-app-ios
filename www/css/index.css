@@ -1,0 +1,185 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FFFFFF;
+    font-family:Helvetica, Arial, sans-serif;
+	text-align:center;
+	font-size:1.0625em;
+    height:100%;
+    margin:0em;
+    padding:0em;
+    width:100%;
+	color: #32208c;
+    padding-top: 2em;
+}
+
+.label-container {
+	-webkit-flex-basis: 100%;
+	display: -webkit-flex;
+	-webkit-flex-wrap: nowrap;
+	-webkit-justify-content: space-between;
+/*	margin-top: 2rem;*/
+    margin-bottom: 2rem;
+}
+
+.label {
+	color: #32208c;
+	font-size: 1rem;
+/*	margin-top: 1rem;*/
+	text-align: center;
+	max-width: 3rem;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.label:nth-of-type(1) {
+    float:left;
+    margin-left: 10%;
+    text-align: left;
+    }
+.label:nth-of-type(2) {
+    float:right;
+    margin-right: 10%;
+    text-align: right;
+    }
+
+button {
+	-webkit-tap-highlight-color: #5d32d9;
+    color: #FFFFFF;
+    background-color:#834fab;
+  	font-weight: bold;
+  	font-size:1.0625em;
+  	padding: 10px 15px;
+  	font-family:Helvetica, Arial, sans-serif;
+  	border-radius:4px;
+  	border-color:#32208c;
+  	border-style:solid;
+  	width:300px;
+  	height:auto;
+  	margin-bottom:5px;
+}
+
+textarea {
+  	font-size:1.00em;
+  	font-weight: bold;
+  	border-radius: 1px;
+  	border-color: #5d32d9;
+  	border-style: solid;
+  	width: 300px;
+  	height: 100px;
+}
+
+input[type=range] {
+	-webkit-appearance: slider-horizontal;
+	writing-mode: horizontal-lr;
+	height: 5px;
+    width: 300px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	height: 5px;
+	width: 300px;
+	background: #834fab;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;	
+	height: 20px;
+	width: 20px;
+	background: #5d32d9;
+	border-radius: 50%;
+	margin-top: -4px;
+	cursor: pointer;	
+}
+
+input[type=range]:focus {
+	outine:none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #32208c;
+}
+
+ul
+{
+	list-style-type: none;
+	padding: 0em;
+	margin: 0em;
+}
+
+h1 {
+    font-size:2.00em;
+    font-weight:normal;
+    margin:0em;
+    overflow:visible;
+    padding:0em;
+    text-align:center;
+}
+
+/*Portrait layout (default)*/
+.app {
+    /*background-color:#002A5C;*/
+    /*position:absolute;*/             /* position in the center of the screen */
+    /*left:50%;*/
+    /*top:50%;*/
+    /*height:50px;*/                   /* text area height */
+    /*width:225px;*/                   /* text area width */
+    /*text-align:center;*/
+    /*padding:180px 0px 0px 0px;*/     /* image height is 200px (bottom 20px are overlapped with text) */
+    /*margin:-115px 0px 0px -112px;*/  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0em 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0em 0em -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:1em;
+    margin:0em 30px;
+    padding:0.125em 0em;
+}
+
+.event.listening {
+    background-color:#5d32d9;
+    display:block;
+}
+
+.event.received {
+    background-color:#834fab;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
